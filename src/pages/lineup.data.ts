@@ -25,13 +25,13 @@ export default [
         }
       },
       "init_time": "2023-07-11T14:00:00",
-      "end_time": "2023-07-11T20:00:00",
+      "end_time": "2023-07-11T16:00:00",
       "ended": false,
       "started": false
     },
     {
       "artist": {
-        "artist_name": "Artista 3",
+        "artist_name": "Astrix",
         "img": "imagem_artista_3.jpg",
         "link": "link_artista_3",
         "socialMedias": {
@@ -39,8 +39,8 @@ export default [
           "soundcloud": "link_soundcloud_artista_3"
         }
       },
-      "init_time": "2023-07-11T22:00:00",
-      "end_time": "2023-07-11T00:00:00",
+      "init_time": "2023-07-11T18:00:00",
+      "end_time": "2023-07-12T24:00:00",
       "ended": false,
       "started": false
     }

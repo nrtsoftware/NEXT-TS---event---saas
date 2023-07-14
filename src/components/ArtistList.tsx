@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 const artists = [
   { name: 'Artista 1', genre: 'Pop', playing: true, ended: false, started: true },
   { name: 'Artista 2', genre: 'Rock', playing: false, ended: false, started: false },
@@ -12,7 +11,7 @@ const artists = [
   { name: 'Artista 9', genre: 'Hip Hop', playing: false, ended: false, started: false },
   { name: 'Artista 10', genre: 'Hip Hop', playing: false, ended: false, started: false },
   { name: 'Artista 11', genre: 'Jazz', playing: false, ended: false, started: false },
-  { name: 'Artista 12', genre: 'Jazz', playing: false, ended: false, started: false },
+  { name: 'Artista 12', genre: 'Psytrance', playing: false, ended: false, started: false },
   { name: 'Artista 13', genre: 'Jazz', playing: false, ended: false, started: false },
   { name: 'Artista 14', genre: 'Jazz', playing: false, ended: false, started: false },
   { name: 'Artista 15', genre: 'Hip Hop', playing: false, ended: true, started: true },
@@ -53,7 +52,7 @@ const ArtistList = () => {
       <div className="flex space-x-2">
         <button
           className={`px-4 py-2 rounded-md ${
-            selectedGenre === '' && filter === '' ? 'bg-blue-500 text-white' : 'bg-gray-200'
+            selectedGenre === '' && filter === '' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black'
           }`}
           onClick={() => handleGenreClick('')}
         >
@@ -63,7 +62,7 @@ const ArtistList = () => {
           <button
             key={genre}
             className={`px-4 py-2 rounded-md ${
-              selectedGenre === genre ? 'bg-blue-500 text-white' : 'bg-gray-200'
+              selectedGenre === genre ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black shadow'
             }`}
             onClick={() => handleGenreClick(genre)}
           >
@@ -72,7 +71,7 @@ const ArtistList = () => {
         ))}
         <button
           className={`px-4 py-2 rounded-md ${
-            filter === 'playing' ? 'bg-blue-500 text-white' : 'bg-gray-200'
+            filter === 'playing' ? 'bg-green-500 text-white' : 'bg-green-200 text-black shadow'
           }`}
           onClick={() => handleFilterClick('playing')}
         >
@@ -80,7 +79,7 @@ const ArtistList = () => {
         </button>
         <button
           className={`px-4 py-2 rounded-md ${
-            filter === 'ended' ? 'bg-blue-500 text-white' : 'bg-gray-200'
+            filter === 'ended' ? 'bg-red-500 text-white' : 'bg-red-200 text-black shadow'
           }`}
           onClick={() => handleFilterClick('ended')}
         >
@@ -88,7 +87,7 @@ const ArtistList = () => {
         </button>
         <button
           className={`px-4 py-2 rounded-md ${
-            filter === 'notStarted' ? 'bg-blue-500 text-white' : 'bg-gray-200'
+            filter === 'notStarted' ? 'bg-blue-500 text-white' : 'bg-blue-200 text-black shadow'
           }`}
           onClick={() => handleFilterClick('notStarted')}
         >

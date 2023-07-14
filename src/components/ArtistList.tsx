@@ -99,9 +99,9 @@ const ArtistList = () => {
       </div>
       <ul ref={animationParent} className="mt-4">
         {filteredArtists.map((artist) => (
-          <li key={artist.name} className="bg-white p-4 mb-2 rounded-md">
-            <h3 className="font-semibold text-gray-900">{artist.name}</h3>
-            <p className="text-gray-500">{artist.genre}</p>
+          <li key={artist.name} className="bg-neutral-900 border border-indigo-950 p-4 mb-2 rounded-md">
+            <h3 className="font-semibold text-white-900">{artist.name}</h3>
+            <p className="text-white-500">{artist.genre}</p>
             <div>
               {artist.playing && artist.started && (
                 <p className="border border-green-400 bg-green-600 py-1 px-4 rounded-md inline-block text-white uppercase tracking-wider text-xs">

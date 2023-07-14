@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { useAutoAnimate } from '@formkit/auto-animate/react';
+
 const artists = [
   { name: 'Artista 1', genre: 'Pop', playing: true, ended: false, started: true },
   { name: 'Artista 2', genre: 'Rock', playing: false, ended: false, started: false },
@@ -21,6 +23,7 @@ const ArtistList = () => {
   const [selectedGenre, setSelectedGenre] = useState('');
   const [genres, setGenres] = useState<string[]>([]);
   const [filter, setFilter] = useState('');
+  const [animationParent] = useAutoAnimate();
 
   useEffect(() => {
     const uniqueGenres = [...new Set(artists.map((artist) => artist.genre))];
@@ -94,9 +97,9 @@ const ArtistList = () => {
           Sets Não Iniciados
         </button>
       </div>
-      <div className="mt-4">
+      <ul ref={animationParent} className="mt-4">
         {filteredArtists.map((artist) => (
-          <div key={artist.name} className="bg-white p-4 mb-2 rounded-md">
+          <li key={artist.name} className="bg-white p-4 mb-2 rounded-md">
             <h3 className="font-semibold text-gray-900">{artist.name}</h3>
             <p className="text-gray-500">{artist.genre}</p>
             <div>
@@ -111,9 +114,9 @@ const ArtistList = () => {
                 </p>
               )}
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

@@ -25,7 +25,7 @@ export default function Index() {
         </div>
         <EventLiveInfo data={lineup} />          
         <Weather city="Guarulhos" />
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-black via-black dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
+        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-black via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
           <a
             className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
@@ -78,7 +78,7 @@ export default function Index() {
       after:via-[#0141ff] 
       after:opacity-40 
       before:lg:h-[360px]">
-        <div className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert">
+        <div className="relative">
           <Image
             className=""
             src="/next.svg"
@@ -88,7 +88,7 @@ export default function Index() {
             priority
         />
 
-        <p className='text-white'>DIA 23 A 25 DE FEVEREIRO</p>
+        <p className='text-wh'>DIA 23 A 25 DE FEVEREIRO</p>
         </div>
       </div>
 
@@ -96,7 +96,7 @@ export default function Index() {
         <div className='text-center flex lg:text-left py-3'>
           <a
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -113,7 +113,7 @@ export default function Index() {
 
           <a
             href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -130,7 +130,7 @@ export default function Index() {
 
           <a
             href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -147,7 +147,7 @@ export default function Index() {
 
           <a
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100"
             target="_blank"
             rel="noopener noreferrer"
           >

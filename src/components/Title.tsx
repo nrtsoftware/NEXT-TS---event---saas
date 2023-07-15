@@ -9,9 +9,9 @@ const Title = (props: any) => {
     // console.log(secondText, 'second text')
     //const firstText = matches ? matches[0] : '';
     let JSX = 
-        <div className="flex justify-center text-5xl font-bold"> 
+        <div className="flex justify-center text-4xl font-bold flex-wrap"> 
             <span>{firstText}</span> 
-            <span className="font-thin text-5xl mt-auto pb-2 pl-3">{secondText}</span>
+            <span className="font-thin text-4xl mt-auto pb-2 pl-3">{secondText}</span>
         </div>
     return JSX;
 }

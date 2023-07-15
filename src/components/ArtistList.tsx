@@ -1,40 +1,41 @@
 import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
 
 const artists = [
   { name: 'Artista 1', genre: 'Pop', playing: true, ended: false, started: true, socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
-  }, photo: '' },
+  }, photo: 'artist1.png' },
   { name: 'Artista 2', genre: 'Rock', playing: false, ended: false, started: false,socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
-  }, photo: '' },
+  }, photo: 'artist2.png' },
   { name: 'Artista 3', genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
-  }, photo: '' },
+  }, photo: 'artist3.png' },
   { name: 'Artista 4', genre: 'Hip Hop', playing: false, ended: false, started: false, socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
-  }, photo: '' },
+  }, photo: 'artist5.png' },
   { name: 'Artista 5', genre: 'Reggae', playing: false, ended: false, started: false, socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
-  }, photo: '' },
+  }, photo: 'artist6.png' },
   { name: 'Artista 6', genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
-  }, photo: '' },
+  }, photo: 'artist7.png' },
   { name: 'Artista 7', genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
-  }, photo: '' },
+  }, photo: 'artist8.png' },
   { name: 'Artista 8', genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
   }, photo: '' },
   { name: 'Artista 9', genre: 'Hip Hop', playing: false, ended: false, started: false, socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
-  }, photo: '' },
+  }, photo: 'artist9.png' },
   { name: 'Artista 10', genre: 'Hip Hop', playing: false, ended: false, started: false, socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
-  }, photo: '' },
+  }, photo: 'artist10.png' },
   { name: 'Artista 11', genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
-  }, photo: '' },
+  }, photo: 'artist11.png' },
   { name: 'Artista 12', genre: 'Psytrance', playing: false, ended: false, started: false, socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
   }, photo: '' },
@@ -129,20 +130,34 @@ const ArtistList = () => {
       </div>
       <ul ref={animationParent} className="mt-4">
         {filteredArtists.map((artist) => (
-          <li key={artist.name} className="bg-neutral-900 border border-indigo-950 p-4 mb-2 rounded-md">
-            <h3 className="font-semibold text-white-900">{artist.name}</h3>
-            <p className="text-white-500">{artist.genre}</p>
+          <li key={artist.name} className="bg-neutral-900 border border-indigo-950 p-4 mb-2 rounded-md flex justify-between items-center">
             <div>
-              {artist.playing && artist.started && (
-                <p className="border border-green-400 bg-green-600 py-1 px-4 rounded-md inline-block text-white uppercase tracking-wider text-xs">
-                  Tocando agora
-                </p>
-              )}
-              {artist.ended && artist.started && (
-                <p className="border border-red-400 bg-red-600 py-1 px-4 rounded-md inline-block text-white uppercase tracking-wider text-xs">
-                  Set encerrado
-                </p>
-              )}
+              <h3 className="font-semibold text-white-900">{artist.name}</h3>
+              <p className="text-white-500">{artist.genre}</p>
+              <div>
+                {artist.playing && artist.started && (
+                  <p className="border border-green-400 bg-green-600 py-1 px-4 rounded-md inline-block text-white uppercase tracking-wider text-xs">
+                    Tocando agora
+                  </p>
+                )}
+                {artist.ended && artist.started && (
+                  <p className="border border-red-400 bg-red-600 py-1 px-4 rounded-md inline-block text-white uppercase tracking-wider text-xs">
+                    Set encerrado
+                  </p>
+                )}
+              </div>
+            </div>
+
+            <div>
+          
+              <Image
+                src={'/images/examples/' + artist.photo}
+                alt={artist.name}
+                className='rounded-full border-4 border-blue-400 border-opacity-44 shadow-md'
+                width={100}
+                height={24}
+                priority
+              />
             </div>
           </li>
         ))}

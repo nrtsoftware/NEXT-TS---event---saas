@@ -1,3 +1,4 @@
+//const response = fetch('api');
 export default [
     {
       "artist": {

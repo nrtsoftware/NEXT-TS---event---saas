@@ -9,7 +9,6 @@ interface Artist {
     soundcloud: string;
   };
 }
-
 interface SetData {
   artist: Artist;
   init_time: string;

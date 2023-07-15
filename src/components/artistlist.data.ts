@@ -1,6 +1,6 @@
 export default [
     { name: 'Artista 1', realTime: {
-      "init_time": "2023-07-15T10:00:00",
+      "init_time": "2023-07-15T23:00:00",
       "end_time": "2023-07-15T15:00:00",
 }, timeDisplay: '18h30', genre: 'Pop', playing: true, ended: false, started: true, socialMedias: {
       facebook: 'sefoda',  timeDisplay: '18h30',  instagram: 'style', soundcloud: 'fuacaquente'

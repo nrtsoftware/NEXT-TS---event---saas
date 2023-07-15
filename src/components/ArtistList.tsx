@@ -93,11 +93,24 @@ const ArtistList = () => {
         {filteredArtists.map((artist) => (
           <li key={artist.name} className="bg-neutral-900 border border-indigo-950 p-4 mb-2 rounded-md flex justify-between items-center">
             <div>
+
+            {' '}
+          {(() => {
+            const initTime: any = new Date(artist.realTime.init_time);
+            const currentTime: any = new Date().getTime();
+            //const timeUntilEnd = initTime.getTime() - new Date().getTime();
+            if(initTime <= currentTime)  {
+              return 'test';
+            };
+            return '';
+          })()}
+
+          
               <h3 className="font-semibold text-white-900">{artist.name}</h3>
               <p className="text-white-500">{artist.genre}</p>
 
               <div className="flex">
-                <p className="border border-indigo-900 bg-transparent py-1 px-4 rounded-md inline-block text-white uppercase tracking-wider text-xs mr-2">{artist.time}</p>
+                <p className="border border-indigo-900 bg-transparent py-1 px-4 rounded-md inline-block text-white uppercase tracking-wider text-xs mr-2">{artist.timeDisplay}</p>
                 {artist.playing && artist.started && (
                   <p className="border border-green-400 bg-green-600 py-1 px-4 rounded-md inline-block text-white uppercase tracking-wider text-xs">
                     Tocando agora

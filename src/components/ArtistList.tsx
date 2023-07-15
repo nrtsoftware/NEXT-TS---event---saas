@@ -5,7 +5,7 @@ import { FaFacebook, FaInstagram, FaSoundcloud } from 'react-icons/fa';
 
 const artists = [
   { name: 'Artista 1', genre: 'Pop', playing: true, ended: false, started: true, socialMedias: {
-    facebook: 'sefoda', instagram: '', soundcloud: ''
+    facebook: 'sefoda', instagram: 'style', soundcloud: 'fuacaquente'
   }, photo: 'artist1.png' },
   { name: 'Artista 2', genre: 'Rock', playing: false, ended: false, started: false,socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
@@ -157,7 +157,7 @@ const ArtistList = () => {
             </div>
 
             <div>
-            <div className="flex space-x-2 mt-2">
+            <div className="flex mx-auto justify-evenly mb-3 w-100">
                 {artist.socialMedias.facebook && (
                   <a href={artist.socialMedias.facebook} target="_blank" rel="noopener noreferrer">
                     <FaFacebook className="text-white-500 hover:text-blue-400" />

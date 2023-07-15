@@ -10,8 +10,8 @@ export default [
           "soundcloud": "link_soundcloud_artista_1"
         }
       },
-      "init_time": "2023-07-11T10:00:00",
-      "end_time": "2023-07-11T12:00:00",
+      "init_time": "2023-07-15T10:00:00",
+      "end_time": "2023-07-15T15:00:00",
       "ended": false,
       "started": false
     },
@@ -25,8 +25,8 @@ export default [
           "soundcloud": "link_soundcloud_artista_2"
         }
       },
-      "init_time": "2023-07-11T14:00:00",
-      "end_time": "2023-07-11T16:00:00",
+      "init_time": "2023-07-15T15:00:00",
+      "end_time": "2023-07-15T16:00:00",
       "ended": false,
       "started": false
     },
@@ -40,8 +40,8 @@ export default [
           "soundcloud": "link_soundcloud_artista_3"
         }
       },
-      "init_time": "2023-07-11T18:00:00",
-      "end_time": "2023-07-12T24:00:00",
+      "init_time": "2023-07-15T18:00:00",
+      "end_time": "2023-07-15T24:00:00",
       "ended": false,
       "started": false
     }

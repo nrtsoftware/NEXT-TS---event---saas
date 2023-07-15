@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 
+#IGNORE ENVS
+ENV.TS
 # testing
 /coverage
 

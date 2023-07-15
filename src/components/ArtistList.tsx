@@ -88,7 +88,7 @@ const ArtistList = () => {
         <div>
           <button
             className={`px-4 mb-2 mr-2 py-2 rounded-md ${
-              selectedGenre === '' && filter === '' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black'
+              selectedGenre === '' && filter === '' ? 'bg-blue-500 text-white' : 'bg-neutral-900 border-indgo-950 text-white shadow'
             }`}
             onClick={() => handleGenreClick('')}
           >
@@ -98,7 +98,7 @@ const ArtistList = () => {
             <button
               key={genre}
               className={`px-4 mr-2 mb-2 py-2 rounded-md ${
-                selectedGenre === genre ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black shadow'
+                selectedGenre === genre ? 'bg-blue-500 text-white' : 'bg-neutral-900 border-indgo-950 text-white shadow'
               }`}
               onClick={() => handleGenreClick(genre)}
             >
@@ -110,7 +110,7 @@ const ArtistList = () => {
 
           <button
             className={`px-4 mb-2 mr-2 py-2 rounded-md ${
-              filter === 'playing' ? 'bg-green-500 text-white' : 'bg-green-200 text-black shadow'
+              filter === 'playing' ? 'bg-green-500 text-white' : 'bg-neutral-800 border-indgo-950  text-white shadow'
             }`}
             onClick={() => handleFilterClick('playing')}
           >
@@ -118,7 +118,7 @@ const ArtistList = () => {
           </button>
           <button
             className={`px-4 mb-2 mr-2 py-2 rounded-md ${
-              filter === 'ended' ? 'bg-red-500 text-white' : 'bg-red-200 text-black shadow'
+              filter === 'ended' ? 'bg-red-500 text-white' : 'bg-neutral-800 border-indgo-950  text-white shadow'
             }`}
             onClick={() => handleFilterClick('ended')}
           >
@@ -126,7 +126,7 @@ const ArtistList = () => {
           </button>
           <button
             className={`px-4 mb-2 mr-2 py-2 rounded-md ${
-              filter === 'notStarted' ? 'bg-blue-500 text-white' : 'bg-blue-200 text-black shadow'
+              filter === 'notStarted' ? 'bg-blue-500 text-white' : 'bg-neutral-800 border-indgo-950  text-white shadow'
             }`}
             onClick={() => handleFilterClick('notStarted')}
           >

@@ -80,7 +80,7 @@ export default function Index() {
       before:lg:h-[360px]">
         <div className="relative">
           <Image
-            className=""
+            className="invert"
             src="/next.svg"
             alt="Next.js Logo"
             width={180}

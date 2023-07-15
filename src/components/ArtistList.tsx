@@ -84,50 +84,57 @@ const ArtistList = () => {
 
   return (
     <div>
-      <div className="flex space-x-2">
-        <button
-          className={`px-4 py-2 rounded-md ${
-            selectedGenre === '' && filter === '' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black'
-          }`}
-          onClick={() => handleGenreClick('')}
-        >
-          Todos
-        </button>
-        {genres.map((genre) => (
+      <div className="flex flex-col-reverse items-center justify-center flex-wrap-custom">
+        <div>
           <button
-            key={genre}
-            className={`px-4 py-2 rounded-md ${
-              selectedGenre === genre ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black shadow'
+            className={`px-4 mb-2 mr-2 py-2 rounded-md ${
+              selectedGenre === '' && filter === '' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black'
             }`}
-            onClick={() => handleGenreClick(genre)}
+            onClick={() => handleGenreClick('')}
           >
-            {genre}
+            Todos
           </button>
-        ))}
-        <button
-          className={`px-4 py-2 rounded-md ${
-            filter === 'playing' ? 'bg-green-500 text-white' : 'bg-green-200 text-black shadow'
-          }`}
-          onClick={() => handleFilterClick('playing')}
-        >
+          {genres.map((genre) => (
+            <button
+              key={genre}
+              className={`px-4 mr-2 mb-2 py-2 rounded-md ${
+                selectedGenre === genre ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black shadow'
+              }`}
+              onClick={() => handleGenreClick(genre)}
+            >
+              {genre}
+            </button>
+          ))}
+        </div>
+        <div>
+
+          <button
+            className={`px-4 mb-2 mr-2 py-2 rounded-md ${
+              filter === 'playing' ? 'bg-green-500 text-white' : 'bg-green-200 text-black shadow'
+            }`}
+            onClick={() => handleFilterClick('playing')}
+          >
           Sets Ocorrendo
-        </button>
-        <button
-          className={`px-4 py-2 rounded-md ${
-            filter === 'ended' ? 'bg-red-500 text-white' : 'bg-red-200 text-black shadow'
-          }`}
-          onClick={() => handleFilterClick('ended')}
-        >
-          Sets Encerrados
-        </button>
-        <button
-          className={`px-4 py-2 rounded-md ${
-            filter === 'notStarted' ? 'bg-blue-500 text-white' : 'bg-blue-200 text-black shadow'
-          }`}
-          onClick={() => handleFilterClick('notStarted')}
-        >
-          Sets Não Iniciados
-        </button>
+          </button>
+          <button
+            className={`px-4 mb-2 mr-2 py-2 rounded-md ${
+              filter === 'ended' ? 'bg-red-500 text-white' : 'bg-red-200 text-black shadow'
+            }`}
+            onClick={() => handleFilterClick('ended')}
+          >
+            Sets Encerrados
+          </button>
+          <button
+            className={`px-4 mb-2 mr-2 py-2 rounded-md ${
+              filter === 'notStarted' ? 'bg-blue-500 text-white' : 'bg-blue-200 text-black shadow'
+            }`}
+            onClick={() => handleFilterClick('notStarted')}
+          >
+            Sets Não Iniciados
+          </button>
+
+        </div>
+
       </div>
       <ul ref={animationParent} className="mt-4">
         {filteredArtists.map((artist) => (

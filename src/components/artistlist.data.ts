@@ -45,13 +45,13 @@ export default [
       "init_time": "2023-07-15T10:00:00",
       "end_time": "2023-07-15T15:00:00",
 }, timeDisplay: '18h30', genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
-      facebook: '', instagram: '', soundcloud: ''
+      facebook: 'dsagadsg', instagram: 'sagdsa', soundcloud: 'gadsgdas'
     }, photo: '' },
     { name: 'Artista 9', realTime: {
       "init_time": "2023-07-15T10:00:00",
       "end_time": "2023-07-15T15:00:00",
 }, timeDisplay: '18h30',  genre: 'Hip Hop', playing: false, ended: false, started: false, socialMedias: {
-      facebook: '', instagram: '', soundcloud: ''
+      facebook: 'dsggads', instagram: 'agdsgdsa', soundcloud: 'agdsgadsgads'
     }, photo: 'artist9.png' },
     { name: 'Artista 10', realTime: {
       "init_time": "2023-07-15T10:00:00",
@@ -81,7 +81,7 @@ export default [
       "init_time": "2023-07-15T10:00:00",
       "end_time": "2023-07-15T15:00:00",
 }, timeDisplay: '18h30',  genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
-      facebook: '', instagram: '', soundcloud: ''
+      facebook: 'dsaggdsa', instagram: 'dsgaagds', soundcloud: 'agsgasd'
     }, photo: '' },
     { name: 'Artista 15',  realTime: {
       "init_time": "2023-07-15T10:00:00",

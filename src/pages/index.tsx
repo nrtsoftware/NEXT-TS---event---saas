@@ -6,6 +6,7 @@ import Lineup from '@/components/Lineup';
 import Timer from '@/components/Timer';
 import ArtistList from '@/components/ArtistList';
 import CanOrCantList from '@/components/CanOrCantList';
+import Title from '@/components/Title';
 export default function Index() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -124,10 +125,12 @@ export default function Index() {
           </a>
         </div>
 
-        <div className="w-[100%]">
+        <div>
+          <Title title='Line[UP]'/>
           <ArtistList />
         </div>
         <div>
+          <Title title='Pode ou [Não pode]' />
           <CanOrCantList />
         </div>
       </div>

@@ -2,21 +2,51 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
 
 const artists = [
-  { name: 'Artista 1', genre: 'Pop', playing: true, ended: false, started: true },
-  { name: 'Artista 2', genre: 'Rock', playing: false, ended: false, started: false },
-  { name: 'Artista 3', genre: 'Jazz', playing: false, ended: false, started: false },
-  { name: 'Artista 4', genre: 'Hip Hop', playing: false, ended: false, started: false },
-  { name: 'Artista 5', genre: 'Reggae', playing: false, ended: false, started: false },
-  { name: 'Artista 6', genre: 'Jazz', playing: false, ended: false, started: false },
-  { name: 'Artista 7', genre: 'Jazz', playing: false, ended: false, started: false },
-  { name: 'Artista 8', genre: 'Jazz', playing: false, ended: false, started: false },
-  { name: 'Artista 9', genre: 'Hip Hop', playing: false, ended: false, started: false },
-  { name: 'Artista 10', genre: 'Hip Hop', playing: false, ended: false, started: false },
-  { name: 'Artista 11', genre: 'Jazz', playing: false, ended: false, started: false },
-  { name: 'Artista 12', genre: 'Psytrance', playing: false, ended: false, started: false },
-  { name: 'Artista 13', genre: 'Jazz', playing: false, ended: false, started: false },
-  { name: 'Artista 14', genre: 'Jazz', playing: false, ended: false, started: false },
-  { name: 'Artista 15', genre: 'Hip Hop', playing: false, ended: true, started: true },
+  { name: 'Artista 1', genre: 'Pop', playing: true, ended: false, started: true, socialMedias: {
+    facebook: '', instagram: '', soundcloud: ''
+  }, photo: '' },
+  { name: 'Artista 2', genre: 'Rock', playing: false, ended: false, started: false,socialMedias: {
+    facebook: '', instagram: '', soundcloud: ''
+  }, photo: '' },
+  { name: 'Artista 3', genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
+    facebook: '', instagram: '', soundcloud: ''
+  }, photo: '' },
+  { name: 'Artista 4', genre: 'Hip Hop', playing: false, ended: false, started: false, socialMedias: {
+    facebook: '', instagram: '', soundcloud: ''
+  }, photo: '' },
+  { name: 'Artista 5', genre: 'Reggae', playing: false, ended: false, started: false, socialMedias: {
+    facebook: '', instagram: '', soundcloud: ''
+  }, photo: '' },
+  { name: 'Artista 6', genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
+    facebook: '', instagram: '', soundcloud: ''
+  }, photo: '' },
+  { name: 'Artista 7', genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
+    facebook: '', instagram: '', soundcloud: ''
+  }, photo: '' },
+  { name: 'Artista 8', genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
+    facebook: '', instagram: '', soundcloud: ''
+  }, photo: '' },
+  { name: 'Artista 9', genre: 'Hip Hop', playing: false, ended: false, started: false, socialMedias: {
+    facebook: '', instagram: '', soundcloud: ''
+  }, photo: '' },
+  { name: 'Artista 10', genre: 'Hip Hop', playing: false, ended: false, started: false, socialMedias: {
+    facebook: '', instagram: '', soundcloud: ''
+  }, photo: '' },
+  { name: 'Artista 11', genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
+    facebook: '', instagram: '', soundcloud: ''
+  }, photo: '' },
+  { name: 'Artista 12', genre: 'Psytrance', playing: false, ended: false, started: false, socialMedias: {
+    facebook: '', instagram: '', soundcloud: ''
+  }, photo: '' },
+  { name: 'Artista 13', genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
+    facebook: '', instagram: '', soundcloud: ''
+  }, photo: '' },
+  { name: 'Artista 14', genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
+    facebook: '', instagram: '', soundcloud: ''
+  }, photo: '' },
+  { name: 'Artista 15', genre: 'Hip Hop', playing: false, ended: true, started: true,socialMedias: {
+    facebook: '', instagram: '', soundcloud: ''
+  }, photo: '' },
 ];
 
 const ArtistList = () => {

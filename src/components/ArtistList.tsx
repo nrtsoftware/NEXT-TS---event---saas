@@ -85,7 +85,7 @@ const ArtistList = () => {
   return (
     <div>
       <div className="flex flex-col-reverse items-center justify-center flex-wrap-custom">
-        <div>
+        <div className="flex justify-center">
           <button
             className={`px-4 mb-2 mr-2 py-2 rounded-md ${
               selectedGenre === '' && filter === '' ? 'bg-blue-500 text-white' : 'bg-neutral-900 border-indgo-950 text-white shadow'

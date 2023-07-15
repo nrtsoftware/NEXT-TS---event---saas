@@ -85,7 +85,7 @@ const ArtistList = () => {
   return (
     <div>
       <div className="flex flex-col-reverse items-center justify-center flex-wrap-custom">
-        <div className="flex justify-center">
+        <div className="flex justify-center flex-wrap ">
           <button
             className={`px-4 mb-2 mr-2 py-2 rounded-md ${
               selectedGenre === '' && filter === '' ? 'bg-blue-500 text-white' : 'bg-neutral-900 border-indgo-950 text-white shadow'
@@ -106,8 +106,8 @@ const ArtistList = () => {
             </button>
           ))}
         </div>
-        <div>
 
+        <div className="flex justify-center">
           <button
             className={`px-4 mb-2 mr-2 py-2 rounded-md ${
               filter === 'playing' ? 'bg-green-500 text-white' : 'bg-neutral-800 border-indgo-950  text-white shadow'

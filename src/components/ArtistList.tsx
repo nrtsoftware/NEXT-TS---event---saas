@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
+import { FaFacebook, FaInstagram, FaSoundcloud } from 'react-icons/fa';
 
 const artists = [
   { name: 'Artista 1', genre: 'Pop', playing: true, ended: false, started: true, socialMedias: {
-    facebook: '', instagram: '', soundcloud: ''
+    facebook: 'sefoda', instagram: '', soundcloud: ''
   }, photo: 'artist1.png' },
   { name: 'Artista 2', genre: 'Rock', playing: false, ended: false, started: false,socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
@@ -149,7 +150,23 @@ const ArtistList = () => {
             </div>
 
             <div>
-          
+            <div className="flex space-x-2 mt-2">
+                {artist.socialMedias.facebook && (
+                  <a href={artist.socialMedias.facebook} target="_blank" rel="noopener noreferrer">
+                    <FaFacebook className="text-white-500 hover:text-blue-400" />
+                  </a>
+                )}
+                {artist.socialMedias.instagram && (
+                  <a href={artist.socialMedias.instagram} target="_blank" rel="noopener noreferrer">
+                    <FaInstagram className="text-white-500 hover:text-pink-400" />
+                  </a>
+                )}
+                {artist.socialMedias.soundcloud && (
+                  <a href={artist.socialMedias.soundcloud} target="_blank" rel="noopener noreferrer">
+                    <FaSoundcloud className="text-white-500 hover:text-orange-400" />
+                  </a>
+                )}
+            </div>
               <Image
                 src={'/images/examples/' + artist.photo}
                 alt={artist.name}

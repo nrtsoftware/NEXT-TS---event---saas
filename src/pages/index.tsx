@@ -82,7 +82,7 @@ export default function Index() {
             className="invert"
             src="/logo.svg"
             alt="EventLab Logo"
-            width={350}
+            width={100}
             height={37}
             priority
         />

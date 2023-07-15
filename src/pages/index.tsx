@@ -37,8 +37,8 @@ export default function Index() {
               src="/logo.svg"
               alt="EventLab Logo"
               className="invert"
-              width={240}
-              height={240}
+              width={200}
+              height={200}
               priority
             />
           </a>
@@ -82,7 +82,7 @@ export default function Index() {
             className="invert"
             src="/logo.svg"
             alt="EventLab Logo"
-            width={100}
+            width={350}
             height={37}
             priority
         />

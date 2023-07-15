@@ -32,7 +32,6 @@ function Lineup({ data }: LineupProps) {
       for (let i = 0; i < data.length; i++) {
         const initTime = new Date(data[i].init_time).getTime();
         const endTime = new Date(data[i].end_time).getTime();
-        console.log(currentTime, initTime, endTime, currentTime < initTime)
         if (currentTime < initTime) {
           setCurrentSet(null); // Antes do início do set atual
           setTimeRemaining(formatTimeDiff(initTime - currentTime));
@@ -42,7 +41,6 @@ function Lineup({ data }: LineupProps) {
           setTimeRemaining(formatTimeDiff(currentTime - initTime));
           break;
         } else if (i === data.length - 1) {
-          console.log('set terminado')
           setCurrentSet(null); // Depois do término do último set
           setTimeRemaining("Tempo expirado!");
         }

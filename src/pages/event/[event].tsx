@@ -17,11 +17,11 @@ export default function() {
           >
             By{' '}
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
+              src="/logo.svg"
+              alt="Event Logo"
               className=""
-              width={100}
-              height={24}
+              width={240}
+              height={240}
               priority
             />
           </a>

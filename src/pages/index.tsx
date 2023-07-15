@@ -34,11 +34,11 @@ export default function Index() {
           >
             By{' '}
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
+              src="/logo.svg"
+              alt="EventLab Logo"
               className="invert"
-              width={100}
-              height={24}
+              width={240}
+              height={240}
               priority
             />
           </a>
@@ -80,9 +80,9 @@ export default function Index() {
         <div className="relative">
           <Image
             className="invert"
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
+            src="/logo.svg"
+            alt="EventLab Logo"
+            width={350}
             height={37}
             priority
         />

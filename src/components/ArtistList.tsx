@@ -8,19 +8,19 @@ const artists = [
     facebook: 'sefoda',  time: '18h30',  instagram: 'style', soundcloud: 'fuacaquente'
   }, photo: 'artist1.png' },
   { name: 'Artista 2',  time: '18h30',  genre: 'Rock', playing: false, ended: false, started: false,socialMedias: {
-    facebook: '', instagram: '', soundcloud: ''
+    facebook: 'kopdspo', instagram: 'saddsa', soundcloud: 'asddsa'
   }, photo: 'artist2.png' },
   { name: 'Artista 3',  time: '18h30',  genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
-    facebook: '', instagram: '', soundcloud: ''
+    facebook: 'saddsa', instagram: '', soundcloud: ''
   }, photo: 'artist3.png' },
   { name: 'Artista 4',  time: '18h30',  genre: 'Hip Hop', playing: false, ended: false, started: false, socialMedias: {
-    facebook: '', instagram: '', soundcloud: ''
+    facebook: '', instagram: 'dsadas', soundcloud: ''
   }, photo: 'artist5.png' },
   { name: 'Artista 5',  time: '18h30',  genre: 'Reggae', playing: false, ended: false, started: false, socialMedias: {
-    facebook: '', instagram: '', soundcloud: ''
+    facebook: '', instagram: '', soundcloud: 'dasdsa'
   }, photo: 'artist6.png' },
   { name: 'Artista 6',  time: '18h30',  genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
-    facebook: '', instagram: '', soundcloud: ''
+    facebook: 'dsadsa', instagram: '', soundcloud: ''
   }, photo: 'artist7.png' },
   { name: 'Artista 7',  time: '18h30',  genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
     facebook: '', instagram: '', soundcloud: ''

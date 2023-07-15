@@ -1,14 +1,17 @@
 import Clima from "@/integrations/API/Clima/Clima";
+import Image from "next/image";
 import { useState } from "react";
 
-export default function Weather() {
-    const clima = new Clima('Guarulhos');
+export default function Weather(props: any) {
+    const clima = new Clima(props.city);
     const [tempCelsius, setTempCelsius] = useState('0ºC');
+    const [icon, setIcon] = useState('');
     clima.getData().then((e) => {
-      //console.log(e.current.temp_c)
+      setIcon('https:' + e.current.condition.icon);
       setTempCelsius(e.current.temp_c + 'ºC');
     });
     return <>
     Temperature: {tempCelsius}
+    <Image alt="Sol" src={icon} width="40" height="40"/>
     </>
 }

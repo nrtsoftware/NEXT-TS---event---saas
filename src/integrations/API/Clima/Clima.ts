@@ -9,7 +9,9 @@ export default class Clima {
 
   getData(): Promise<any> {
     return new Promise((resolve, reject) => {
-      fetch(`http://api.weatherapi.com/v1/current.json?key=${KEY['WEATHER-API']}&q=${this.CITY}&aqi=no`)
+      fetch(`http://api.weatherapi.com/v1/current.json?key=${KEY['WEATHER-API']}&q=${this.CITY}&aqi=no`, {
+        'mode':'cors',
+      })
         .then((response) => response.json())
         .then((data) => {
           resolve(data);

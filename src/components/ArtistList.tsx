@@ -4,49 +4,49 @@ import { useAutoAnimate } from '@formkit/auto-animate/react';
 import { FaFacebook, FaInstagram, FaSoundcloud } from 'react-icons/fa';
 
 const artists = [
-  { name: 'Artista 1', genre: 'Pop', playing: true, ended: false, started: true, socialMedias: {
-    facebook: 'sefoda', instagram: 'style', soundcloud: 'fuacaquente'
+  { name: 'Artista 1', time: '18h30', genre: 'Pop', playing: true, ended: false, started: true, socialMedias: {
+    facebook: 'sefoda',  time: '18h30',  instagram: 'style', soundcloud: 'fuacaquente'
   }, photo: 'artist1.png' },
-  { name: 'Artista 2', genre: 'Rock', playing: false, ended: false, started: false,socialMedias: {
+  { name: 'Artista 2',  time: '18h30',  genre: 'Rock', playing: false, ended: false, started: false,socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
   }, photo: 'artist2.png' },
-  { name: 'Artista 3', genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
+  { name: 'Artista 3',  time: '18h30',  genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
   }, photo: 'artist3.png' },
-  { name: 'Artista 4', genre: 'Hip Hop', playing: false, ended: false, started: false, socialMedias: {
+  { name: 'Artista 4',  time: '18h30',  genre: 'Hip Hop', playing: false, ended: false, started: false, socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
   }, photo: 'artist5.png' },
-  { name: 'Artista 5', genre: 'Reggae', playing: false, ended: false, started: false, socialMedias: {
+  { name: 'Artista 5',  time: '18h30',  genre: 'Reggae', playing: false, ended: false, started: false, socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
   }, photo: 'artist6.png' },
-  { name: 'Artista 6', genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
+  { name: 'Artista 6',  time: '18h30',  genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
   }, photo: 'artist7.png' },
-  { name: 'Artista 7', genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
+  { name: 'Artista 7',  time: '18h30',  genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
   }, photo: 'artist8.png' },
-  { name: 'Artista 8', genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
+  { name: 'Artista 8',  time: '18h30', genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
   }, photo: '' },
-  { name: 'Artista 9', genre: 'Hip Hop', playing: false, ended: false, started: false, socialMedias: {
+  { name: 'Artista 9',  time: '18h30',  genre: 'Hip Hop', playing: false, ended: false, started: false, socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
   }, photo: 'artist9.png' },
-  { name: 'Artista 10', genre: 'Hip Hop', playing: false, ended: false, started: false, socialMedias: {
+  { name: 'Artista 10',  time: '18h30',  genre: 'Hip Hop', playing: false, ended: false, started: false, socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
   }, photo: 'artist10.png' },
-  { name: 'Artista 11', genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
+  { name: 'Artista 11',  time: '18h30', genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
   }, photo: 'artist11.png' },
-  { name: 'Artista 12', genre: 'Psytrance', playing: false, ended: false, started: false, socialMedias: {
+  { name: 'Artista 12',  time: '18h30',  genre: 'Psytrance', playing: false, ended: false, started: false, socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
   }, photo: '' },
-  { name: 'Artista 13', genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
+  { name: 'Artista 13',  time: '18h30',  genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
   }, photo: '' },
-  { name: 'Artista 14', genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
+  { name: 'Artista 14',  time: '18h30',  genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
   }, photo: '' },
-  { name: 'Artista 15', genre: 'Hip Hop', playing: false, ended: true, started: true,socialMedias: {
+  { name: 'Artista 15',  time: '18h30', genre: 'Hip Hop', playing: false, ended: true, started: true,socialMedias: {
     facebook: '', instagram: '', soundcloud: ''
   }, photo: '' },
 ];
@@ -142,7 +142,9 @@ const ArtistList = () => {
             <div>
               <h3 className="font-semibold text-white-900">{artist.name}</h3>
               <p className="text-white-500">{artist.genre}</p>
-              <div>
+
+              <div className="flex">
+                <p className="border border-indigo-900 bg-transparent py-1 px-4 rounded-md inline-block text-white uppercase tracking-wider text-xs mr-2">{artist.time}</p>
                 {artist.playing && artist.started && (
                   <p className="border border-green-400 bg-green-600 py-1 px-4 rounded-md inline-block text-white uppercase tracking-wider text-xs">
                     Tocando agora

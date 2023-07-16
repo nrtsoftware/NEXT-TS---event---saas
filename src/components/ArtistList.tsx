@@ -35,6 +35,16 @@ const ArtistList = () => {
     ? artists.filter((artist) => !artist.started)
     : artists;
 
+    function borderColor (item:string|null) {
+      switch (item){
+        case "playing":
+          return 'border-green-600'
+        case "ended":
+          return 'border-red-600'
+      };
+      return "border-indigo-900";
+    }
+
   return (
     <div>
       <div className="flex flex-col-reverse items-center justify-center flex-wrap-custom">
@@ -91,7 +101,11 @@ const ArtistList = () => {
       </div>
       <ul ref={animationParent} className="mt-4">
         {filteredArtists.map((artist) => (
-          <li key={artist.name} className="bg-neutral-900 border border-indigo-950 p-4 mb-2 rounded-md flex-col-reverse sm:flex-row flex justify-between items-center">
+          <li key={artist.name} className=
+            {borderColor(artist.playing ? "playing" : (artist.ended ? "ended" : null)) 
+              +` bg-neutral-900 border p-4 mb-2 rounded-md 
+              flex-col-reverse sm:flex-row flex justify-between items-center`}>
+              
             <div>
 
             {' '}
@@ -114,10 +128,12 @@ const ArtistList = () => {
               </div>
 
               <div className="flex sm:my-2 ">
-                <p className="m-auto border border-indigo-900 bg-transparent py-1 
-                px-4 rounded-md inline-block text-white uppercase tracking-wider text-s 
-                md:mr-2 font-semibold">
-                {artist.timeDisplay}
+                <p className=
+                  {borderColor(artist.playing ? "playing" : (artist.ended ? "ended" : null)) 
+                  +` m-auto border bg-transparent py-1 
+                  px-4 rounded-md inline-block text-white uppercase tracking-wider text-s 
+                  md:mr-2 font-semibold`}>
+                  {artist.timeDisplay}
                 </p>
                 {artist.playing && artist.started && (
                   <p className="border border-green-400 bg-green-600 py-1 px-4 rounded-md 
@@ -155,7 +171,7 @@ const ArtistList = () => {
               <Image
                 src={'/images/examples/' + artist.photo}
                 alt={artist.name}
-                className='rounded-full border-4 border-blue-400 border-opacity-44 shadow-md'
+                className='rounded-full  border border-white/30 shadow-xl shadow-black'
                 width={100}
                 height={24}
                 priority

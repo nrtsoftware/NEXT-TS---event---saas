@@ -108,28 +108,34 @@ const ArtistList = () => {
           
               <div className="flex sm:flex-col flex-row sm:w-auto w-100">
                 <div className="sm:flex-col flex my-2 sm:m-0 m-auto">
-                  <h3 className="pr-5 sm:pr-0 font-semibold text-white-900">{artist.name}</h3>
-                  <p className=" sm:ml-0 text-white-500">{artist.genre}</p>
+                  <h3 className="text-xl pr-5 sm:pr-0 font-semibold text-white-900">{artist.name}</h3>
+                  <p className=" sm:ml-0 text-white-500 my-auto">{artist.genre}</p>
                 </div>
               </div>
 
-              <div className="flex">
-                <p className="m-auto border border-indigo-900 bg-transparent py-1 px-4 rounded-md inline-block text-white uppercase tracking-wider text-xs md:mr-2">{artist.timeDisplay}</p>
+              <div className="flex sm:my-2 ">
+                <p className="m-auto border border-indigo-900 bg-transparent py-1 
+                px-4 rounded-md inline-block text-white uppercase tracking-wider text-s 
+                md:mr-2 font-semibold">
+                {artist.timeDisplay}
+                </p>
                 {artist.playing && artist.started && (
-                  <p className="border border-green-400 bg-green-600 py-1 px-4 rounded-md inline-block text-white uppercase tracking-wider text-xs">
+                  <p className="border border-green-400 bg-green-600 py-1 px-4 rounded-md 
+                  inline-block text-white uppercase tracking-wider text-s">
                     Tocando agora
                   </p>
                 )}
                 {artist.ended && artist.started && (
-                  <p className="border border-red-400 bg-red-600 py-1 px-4 rounded-md inline-block text-white uppercase tracking-wider text-xs">
+                  <p className="border border-red-400 bg-red-600 py-1 px-4 rounded-md inline-block 
+                  text-white uppercase tracking-wider text-s">
                     Set encerrado
                   </p>
                 )}
               </div>
             </div>
 
-            <div>
-            <div className="flex mx-auto justify-evenly mb-3 w-100">
+            <div className="flex flex-col sm:flex-col-reverse w-100">
+            <div className="flex justify-evenly sm:mt-3 sm:mb-0 mb-3">
                 {artist.socialMedias.facebook && (
                   <a href={artist.socialMedias.facebook} target="_blank" rel="noopener noreferrer">
                     <FaFacebook className="text-white-500 hover:text-blue-400" />

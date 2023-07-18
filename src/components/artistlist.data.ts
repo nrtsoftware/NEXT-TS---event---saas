@@ -68,13 +68,13 @@ export default [
     { name: 'Artista 12',  realTime: {
       "init_time": "2023-07-15T10:00:00",
       "end_time": "2023-07-15T15:00:00",
-}, timeDisplay: '18h30',  genre: 'Psytrance', playing: false, ended: false, started: false, socialMedias: {
+}, timeDisplay: '18h30',  genre: 'Psytrance', playing: true, ended: false, started: true, socialMedias: {
       facebook: '', instagram: '', soundcloud: ''
     }, photo: '' },
     { name: 'Artista 13',  realTime: {
       "init_time": "2023-07-15T10:00:00",
       "end_time": "2023-07-15T15:00:00",
-}, timeDisplay: '18h30',  genre: 'Jazz', playing: false, ended: false, started: false, socialMedias: {
+}, timeDisplay: '18h30',  genre: 'Jazz', playing: true, ended: false, started: true, socialMedias: {
       facebook: '', instagram: '', soundcloud: ''
     }, photo: '' },
     { name: 'Artista 14',  realTime: {

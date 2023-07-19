@@ -1,12 +1,13 @@
 
 const Title = (props: any) => {
     const pattern = /\[(.*?)\]/; 
+    //console.log(props); //tentando descobrir o tipo pra acabar com a porquice do any
 
     const matches = props.title.match(pattern);
     const parts = props.title.split(pattern);
     const firstText = parts[0].trim();
     const secondText = matches ? matches[1] : '';
-    // console.log(secondText, 'second text')
+    //console.log(secondText, 'second text')
     //const firstText = matches ? matches[0] : '';
     let JSX = 
         <div className="flex justify-center text-4xl font-bold flex-wrap"> 
